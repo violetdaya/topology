@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ImageButton</title>
+    <script src="js/ImageButton.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="1000" height="300"></canvas>
+    <script>
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      var image = new Image();
+      image.src = './img/iconfont-yundonghuwai.png';
+
+      image.onload = function(){
+        var imageButton = new ImageButton(100,100,30,'yellow','pink',image);
+        imageButton.draw(context);        
+      }
+    </script>
+  </body>
+</html>
